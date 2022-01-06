@@ -12,7 +12,18 @@ namespace SBB_Klon
         private void Form1_Load(object sender, EventArgs e)
         {
             var transport = new Transport();
-            var station = transport.GetStations;
+            var stationen = transport.GetStations;
+            // var station = transport.GetConnections("Luzern", "Menznau");
+        }
+
+        private void btnFahrplanSuche_Click(object sender, EventArgs e)
+        {
+            var stationenKarten = new stationenKarten();
+            stationenKarten.Visible = true;
+            stationenKarten.Show();
+            stationenKarten.AutoSize = true;
+            stationenKarten.Titel = "hallo";
+            panelFahrplan.Container.Add(stationenKarten);
         }
     }
 }
