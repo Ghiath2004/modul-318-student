@@ -22,8 +22,10 @@ namespace SBB_Klon
         private string _titel;
         private string _info1Bez;
         private string _info2Bez;
+        private string _info3Bez;
         private string _info1;
         private string _info2;
+        private string _info3;
         private string _verspaetung;
 
         [Category("Custom Props")]
@@ -48,6 +50,13 @@ namespace SBB_Klon
         }
 
         [Category("Custom Props")]
+        public string Info3Bez
+        {
+            get { return _info3Bez; }
+            set { _info3Bez = value; lblKarteInf3Bez.Text = value; }
+        }
+
+        [Category("Custom Props")]
         public string Info1
         {
             get { return _info1; }
@@ -59,6 +68,13 @@ namespace SBB_Klon
         {
             get { return _info2; }
             set { _info2 = value; lblKarteInf2Con.Text = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Info3
+        {
+            get { return _info3; }
+            set { _info3 = value; lblKarteInf3Con.Text = value; }
         }
 
         [Category("Custom Props")]

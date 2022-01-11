@@ -36,6 +36,8 @@
             this.lblKarteInf1Con = new System.Windows.Forms.Label();
             this.lblKarteInf2Bez = new System.Windows.Forms.Label();
             this.btnKarteMapDetails = new System.Windows.Forms.Button();
+            this.lblKarteInf3Bez = new System.Windows.Forms.Label();
+            this.lblKarteInf3Con = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnKarteTeilen
@@ -52,7 +54,7 @@
             // 
             this.lblKarteTitel.AutoSize = true;
             this.lblKarteTitel.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKarteTitel.Location = new System.Drawing.Point(20, 31);
+            this.lblKarteTitel.Location = new System.Drawing.Point(20, 22);
             this.lblKarteTitel.Name = "lblKarteTitel";
             this.lblKarteTitel.Size = new System.Drawing.Size(232, 25);
             this.lblKarteTitel.TabIndex = 1;
@@ -62,18 +64,18 @@
             // 
             this.lblKarteInf2Con.AutoSize = true;
             this.lblKarteInf2Con.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKarteInf2Con.Location = new System.Drawing.Point(112, 88);
+            this.lblKarteInf2Con.Location = new System.Drawing.Point(112, 77);
             this.lblKarteInf2Con.Name = "lblKarteInf2Con";
-            this.lblKarteInf2Con.Size = new System.Drawing.Size(58, 20);
+            this.lblKarteInf2Con.Size = new System.Drawing.Size(118, 20);
             this.lblKarteInf2Con.TabIndex = 4;
-            this.lblKarteInf2Con.Text = "1h 33m";
+            this.lblKarteInf2Con.Text = "06.01.2022 15:05";
             // 
             // lblKarteVerspaetung
             // 
             this.lblKarteVerspaetung.AutoSize = true;
             this.lblKarteVerspaetung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblKarteVerspaetung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblKarteVerspaetung.Location = new System.Drawing.Point(236, 66);
+            this.lblKarteVerspaetung.Location = new System.Drawing.Point(236, 57);
             this.lblKarteVerspaetung.Name = "lblKarteVerspaetung";
             this.lblKarteVerspaetung.Size = new System.Drawing.Size(60, 20);
             this.lblKarteVerspaetung.TabIndex = 5;
@@ -83,7 +85,7 @@
             // 
             this.lblKarteInf1Bez.AutoSize = true;
             this.lblKarteInf1Bez.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKarteInf1Bez.Location = new System.Drawing.Point(20, 66);
+            this.lblKarteInf1Bez.Location = new System.Drawing.Point(20, 57);
             this.lblKarteInf1Bez.Name = "lblKarteInf1Bez";
             this.lblKarteInf1Bez.Size = new System.Drawing.Size(86, 20);
             this.lblKarteInf1Bez.TabIndex = 6;
@@ -93,7 +95,7 @@
             // 
             this.lblKarteInf1Con.AutoSize = true;
             this.lblKarteInf1Con.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKarteInf1Con.Location = new System.Drawing.Point(112, 66);
+            this.lblKarteInf1Con.Location = new System.Drawing.Point(112, 57);
             this.lblKarteInf1Con.Name = "lblKarteInf1Con";
             this.lblKarteInf1Con.Size = new System.Drawing.Size(118, 20);
             this.lblKarteInf1Con.TabIndex = 7;
@@ -103,11 +105,11 @@
             // 
             this.lblKarteInf2Bez.AutoSize = true;
             this.lblKarteInf2Bez.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblKarteInf2Bez.Location = new System.Drawing.Point(20, 88);
+            this.lblKarteInf2Bez.Location = new System.Drawing.Point(20, 77);
             this.lblKarteInf2Bez.Name = "lblKarteInf2Bez";
-            this.lblKarteInf2Bez.Size = new System.Drawing.Size(82, 20);
+            this.lblKarteInf2Bez.Size = new System.Drawing.Size(91, 20);
             this.lblKarteInf2Bez.TabIndex = 8;
-            this.lblKarteInf2Bez.Text = "Fahrtdauer:";
+            this.lblKarteInf2Bez.Text = "Ankunftzeit: ";
             // 
             // btnKarteMapDetails
             // 
@@ -119,12 +121,32 @@
             this.btnKarteMapDetails.Text = "Karte öffnen";
             this.btnKarteMapDetails.UseVisualStyleBackColor = true;
             // 
+            // lblKarteInf3Bez
+            // 
+            this.lblKarteInf3Bez.AutoSize = true;
+            this.lblKarteInf3Bez.Location = new System.Drawing.Point(20, 97);
+            this.lblKarteInf3Bez.Name = "lblKarteInf3Bez";
+            this.lblKarteInf3Bez.Size = new System.Drawing.Size(86, 20);
+            this.lblKarteInf3Bez.TabIndex = 10;
+            this.lblKarteInf3Bez.Text = "Fahrtdauer: ";
+            // 
+            // lblKarteInf3Con
+            // 
+            this.lblKarteInf3Con.AutoSize = true;
+            this.lblKarteInf3Con.Location = new System.Drawing.Point(112, 97);
+            this.lblKarteInf3Con.Name = "lblKarteInf3Con";
+            this.lblKarteInf3Con.Size = new System.Drawing.Size(44, 20);
+            this.lblKarteInf3Con.TabIndex = 11;
+            this.lblKarteInf3Con.Text = "02:55";
+            // 
             // stationenKarten
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Controls.Add(this.lblKarteInf3Con);
+            this.Controls.Add(this.lblKarteInf3Bez);
             this.Controls.Add(this.btnKarteMapDetails);
             this.Controls.Add(this.lblKarteInf2Bez);
             this.Controls.Add(this.lblKarteInf1Con);
@@ -150,5 +172,7 @@
         private Label lblKarteInf1Con;
         private Label lblKarteInf2Bez;
         private Button btnKarteMapDetails;
+        private Label lblKarteInf3Bez;
+        private Label lblKarteInf3Con;
     }
 }
