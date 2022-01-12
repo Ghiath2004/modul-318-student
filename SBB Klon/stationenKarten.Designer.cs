@@ -1,6 +1,6 @@
 ﻿namespace SBB_Klon
 {
-    partial class stationenKarten
+    partial class stationKarte
     {
         /// <summary> 
         /// Erforderliche Designervariable.
@@ -139,7 +139,7 @@
             this.lblKarteInf3Con.TabIndex = 11;
             this.lblKarteInf3Con.Text = "02:55";
             // 
-            // stationenKarten
+            // stationKarte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -155,8 +155,9 @@
             this.Controls.Add(this.lblKarteInf2Con);
             this.Controls.Add(this.lblKarteTitel);
             this.Controls.Add(this.btnKarteTeilen);
-            this.Name = "stationenKarten";
+            this.Name = "stationKarte";
             this.Size = new System.Drawing.Size(797, 150);
+            this.Load += new System.EventHandler(this.stationenKarten_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

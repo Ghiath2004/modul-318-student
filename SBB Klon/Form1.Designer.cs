@@ -40,14 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFahrplanSuche = new System.Windows.Forms.Button();
-            this.btnFahrplanEndstationMeinStandort = new System.Windows.Forms.Button();
-            this.btnFahrplanStartstationMeinStandort = new System.Windows.Forms.Button();
             this.txtFahrplanStartstation = new System.Windows.Forms.ComboBox();
             this.txtFahrplanEndstation = new System.Windows.Forms.ComboBox();
             this.txtFahrplanDatum = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioFahrplanAnDatum = new System.Windows.Forms.RadioButton();
             this.radioFahrplanAbDatum = new System.Windows.Forms.RadioButton();
+            this.btnFahrplanStationenTauschen = new System.Windows.Forms.Button();
             this.panelFahrplanErgebnisse = new System.Windows.Forms.FlowLayoutPanel();
             this.panelFahrplan = new System.Windows.Forms.Panel();
             this.panelVerbindungen = new System.Windows.Forms.Panel();
@@ -62,11 +61,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.radioVerbindungenAnDatum = new System.Windows.Forms.RadioButton();
             this.radioVerbindungenAbDatum = new System.Windows.Forms.RadioButton();
-            this.panelVerbindungenErgebnisse = new System.Windows.Forms.Panel();
+            this.panelVerbindungenErgebnisse = new System.Windows.Forms.FlowLayoutPanel();
             this.tableAppOptions = new System.Windows.Forms.TableLayoutPanel();
             this.panelInDerNaehe = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableFahrplan.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -85,7 +85,7 @@
             // 
             this.btnFahrplan.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnFahrplan.Enabled = false;
-            this.btnFahrplan.Location = new System.Drawing.Point(41, 5);
+            this.btnFahrplan.Location = new System.Drawing.Point(22, 5);
             this.btnFahrplan.Name = "btnFahrplan";
             this.btnFahrplan.Size = new System.Drawing.Size(260, 70);
             this.btnFahrplan.TabIndex = 0;
@@ -96,7 +96,8 @@
             // btnInDerNaehe
             // 
             this.btnInDerNaehe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnInDerNaehe.Location = new System.Drawing.Point(725, 5);
+            this.btnInDerNaehe.Enabled = false;
+            this.btnInDerNaehe.Location = new System.Drawing.Point(631, 5);
             this.btnInDerNaehe.Name = "btnInDerNaehe";
             this.btnInDerNaehe.Size = new System.Drawing.Size(260, 70);
             this.btnInDerNaehe.TabIndex = 3;
@@ -107,7 +108,7 @@
             // btnVerbindungen
             // 
             this.btnVerbindungen.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnVerbindungen.Location = new System.Drawing.Point(383, 5);
+            this.btnVerbindungen.Location = new System.Drawing.Point(326, 5);
             this.btnVerbindungen.Name = "btnVerbindungen";
             this.btnVerbindungen.Size = new System.Drawing.Size(260, 70);
             this.btnVerbindungen.TabIndex = 4;
@@ -132,7 +133,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1026, 80);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(914, 80);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // tableFahrplan
@@ -156,7 +157,7 @@
             this.tableFahrplan.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableFahrplan.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableFahrplan.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableFahrplan.Size = new System.Drawing.Size(1014, 431);
+            this.tableFahrplan.Size = new System.Drawing.Size(902, 478);
             this.tableFahrplan.TabIndex = 6;
             // 
             // label1
@@ -186,19 +187,18 @@
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.btnFahrplanSuche, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnFahrplanEndstationMeinStandort, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnFahrplanStartstationMeinStandort, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtFahrplanStartstation, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtFahrplanEndstation, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.txtFahrplanDatum, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.panel1, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.btnFahrplanStationenTauschen, 2, 0);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 63);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 3;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1008, 114);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(896, 114);
             this.tableLayoutPanel3.TabIndex = 10;
             // 
             // label4
@@ -238,28 +238,10 @@
             this.btnFahrplanSuche.Location = new System.Drawing.Point(389, 79);
             this.btnFahrplanSuche.Name = "btnFahrplanSuche";
             this.btnFahrplanSuche.Size = new System.Drawing.Size(139, 32);
-            this.btnFahrplanSuche.TabIndex = 15;
+            this.btnFahrplanSuche.TabIndex = 21;
             this.btnFahrplanSuche.Text = "Suchen";
             this.btnFahrplanSuche.UseVisualStyleBackColor = true;
             this.btnFahrplanSuche.Click += new System.EventHandler(this.btnFahrplanSuche_Click);
-            // 
-            // btnFahrplanEndstationMeinStandort
-            // 
-            this.btnFahrplanEndstationMeinStandort.Location = new System.Drawing.Point(389, 41);
-            this.btnFahrplanEndstationMeinStandort.Name = "btnFahrplanEndstationMeinStandort";
-            this.btnFahrplanEndstationMeinStandort.Size = new System.Drawing.Size(139, 31);
-            this.btnFahrplanEndstationMeinStandort.TabIndex = 16;
-            this.btnFahrplanEndstationMeinStandort.Text = "Mein Standort";
-            this.btnFahrplanEndstationMeinStandort.UseVisualStyleBackColor = true;
-            // 
-            // btnFahrplanStartstationMeinStandort
-            // 
-            this.btnFahrplanStartstationMeinStandort.Location = new System.Drawing.Point(389, 3);
-            this.btnFahrplanStartstationMeinStandort.Name = "btnFahrplanStartstationMeinStandort";
-            this.btnFahrplanStartstationMeinStandort.Size = new System.Drawing.Size(139, 31);
-            this.btnFahrplanStartstationMeinStandort.TabIndex = 17;
-            this.btnFahrplanStartstationMeinStandort.Text = "Mein Standort";
-            this.btnFahrplanStartstationMeinStandort.UseVisualStyleBackColor = true;
             // 
             // txtFahrplanStartstation
             // 
@@ -270,6 +252,7 @@
             this.txtFahrplanStartstation.Size = new System.Drawing.Size(260, 31);
             this.txtFahrplanStartstation.TabIndex = 19;
             this.txtFahrplanStartstation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSartstation_KeyDown);
+            this.txtFahrplanStartstation.Leave += new System.EventHandler(this.txtStation_LeaveFocus);
             // 
             // txtFahrplanEndstation
             // 
@@ -280,6 +263,7 @@
             this.txtFahrplanEndstation.Size = new System.Drawing.Size(260, 31);
             this.txtFahrplanEndstation.TabIndex = 20;
             this.txtFahrplanEndstation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEndstation_KeyDown);
+            this.txtFahrplanEndstation.Leave += new System.EventHandler(this.txtStation_LeaveFocus);
             // 
             // txtFahrplanDatum
             // 
@@ -290,7 +274,7 @@
             this.txtFahrplanDatum.Location = new System.Drawing.Point(123, 79);
             this.txtFahrplanDatum.Name = "txtFahrplanDatum";
             this.txtFahrplanDatum.Size = new System.Drawing.Size(260, 30);
-            this.txtFahrplanDatum.TabIndex = 21;
+            this.txtFahrplanDatum.TabIndex = 22;
             // 
             // panel1
             // 
@@ -301,7 +285,7 @@
             this.panel1.Controls.Add(this.radioFahrplanAbDatum);
             this.panel1.Location = new System.Drawing.Point(534, 79);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(471, 32);
+            this.panel1.Size = new System.Drawing.Size(359, 32);
             this.panel1.TabIndex = 22;
             // 
             // radioFahrplanAnDatum
@@ -310,21 +294,31 @@
             this.radioFahrplanAnDatum.Location = new System.Drawing.Point(120, 6);
             this.radioFahrplanAnDatum.Name = "radioFahrplanAnDatum";
             this.radioFahrplanAnDatum.Size = new System.Drawing.Size(111, 24);
-            this.radioFahrplanAnDatum.TabIndex = 1;
-            this.radioFahrplanAnDatum.TabStop = true;
+            this.radioFahrplanAnDatum.TabIndex = 24;
             this.radioFahrplanAnDatum.Text = "Ankunftszeit";
             this.radioFahrplanAnDatum.UseVisualStyleBackColor = true;
             // 
             // radioFahrplanAbDatum
             // 
             this.radioFahrplanAbDatum.AutoSize = true;
+            this.radioFahrplanAbDatum.Checked = true;
             this.radioFahrplanAbDatum.Location = new System.Drawing.Point(3, 6);
             this.radioFahrplanAbDatum.Name = "radioFahrplanAbDatum";
             this.radioFahrplanAbDatum.Size = new System.Drawing.Size(110, 24);
-            this.radioFahrplanAbDatum.TabIndex = 0;
+            this.radioFahrplanAbDatum.TabIndex = 23;
             this.radioFahrplanAbDatum.TabStop = true;
             this.radioFahrplanAbDatum.Text = "Abfahrtszeit";
             this.radioFahrplanAbDatum.UseVisualStyleBackColor = true;
+            // 
+            // btnFahrplanStationenTauschen
+            // 
+            this.btnFahrplanStationenTauschen.Location = new System.Drawing.Point(389, 3);
+            this.btnFahrplanStationenTauschen.Name = "btnFahrplanStationenTauschen";
+            this.btnFahrplanStationenTauschen.Size = new System.Drawing.Size(139, 31);
+            this.btnFahrplanStationenTauschen.TabIndex = 23;
+            this.btnFahrplanStationenTauschen.Text = "Tauschen";
+            this.btnFahrplanStationenTauschen.UseVisualStyleBackColor = true;
+            this.btnFahrplanStationenTauschen.Click += new System.EventHandler(this.btnFahrplanStationenTauschen_Click);
             // 
             // panelFahrplanErgebnisse
             // 
@@ -335,7 +329,7 @@
             this.panelFahrplanErgebnisse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelFahrplanErgebnisse.Location = new System.Drawing.Point(3, 193);
             this.panelFahrplanErgebnisse.Name = "panelFahrplanErgebnisse";
-            this.panelFahrplanErgebnisse.Size = new System.Drawing.Size(1008, 235);
+            this.panelFahrplanErgebnisse.Size = new System.Drawing.Size(896, 282);
             this.panelFahrplanErgebnisse.TabIndex = 11;
             // 
             // panelFahrplan
@@ -347,7 +341,7 @@
             this.panelFahrplan.Controls.Add(this.tableFahrplan);
             this.panelFahrplan.Location = new System.Drawing.Point(3, 3);
             this.panelFahrplan.Name = "panelFahrplan";
-            this.panelFahrplan.Size = new System.Drawing.Size(1020, 437);
+            this.panelFahrplan.Size = new System.Drawing.Size(908, 484);
             this.panelFahrplan.TabIndex = 7;
             // 
             // panelVerbindungen
@@ -356,9 +350,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelVerbindungen.Controls.Add(this.tableLayoutPanel2);
-            this.panelVerbindungen.Location = new System.Drawing.Point(3, 446);
+            this.panelVerbindungen.Location = new System.Drawing.Point(3, 493);
             this.panelVerbindungen.Name = "panelVerbindungen";
-            this.panelVerbindungen.Size = new System.Drawing.Size(1020, 437);
+            this.panelVerbindungen.Size = new System.Drawing.Size(908, 494);
             this.panelVerbindungen.TabIndex = 8;
             // 
             // tableLayoutPanel2
@@ -381,7 +375,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1014, 431);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(902, 488);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label5
@@ -415,7 +409,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1008, 74);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(896, 74);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // label6
@@ -446,6 +440,8 @@
             this.txtVerbindungenStation.Name = "txtVerbindungenStation";
             this.txtVerbindungenStation.Size = new System.Drawing.Size(260, 31);
             this.txtVerbindungenStation.TabIndex = 4;
+            this.txtVerbindungenStation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtVerbindungenStation_KeyDown);
+            this.txtVerbindungenStation.Leave += new System.EventHandler(this.txtStation_LeaveFocus);
             // 
             // txtVerbindungenDatum
             // 
@@ -459,6 +455,7 @@
             // 
             // btnVerbindungenSuchen
             // 
+            this.btnVerbindungenSuchen.Enabled = false;
             this.btnVerbindungenSuchen.Location = new System.Drawing.Point(389, 40);
             this.btnVerbindungenSuchen.Name = "btnVerbindungenSuchen";
             this.btnVerbindungenSuchen.Size = new System.Drawing.Size(139, 31);
@@ -476,7 +473,7 @@
             this.panel2.Controls.Add(this.radioVerbindungenAbDatum);
             this.panel2.Location = new System.Drawing.Point(534, 40);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(471, 31);
+            this.panel2.Size = new System.Drawing.Size(359, 31);
             this.panel2.TabIndex = 6;
             // 
             // radioVerbindungenAnDatum
@@ -486,13 +483,13 @@
             this.radioVerbindungenAnDatum.Name = "radioVerbindungenAnDatum";
             this.radioVerbindungenAnDatum.Size = new System.Drawing.Size(111, 24);
             this.radioVerbindungenAnDatum.TabIndex = 1;
-            this.radioVerbindungenAnDatum.TabStop = true;
             this.radioVerbindungenAnDatum.Text = "Ankunftszeit";
             this.radioVerbindungenAnDatum.UseVisualStyleBackColor = true;
             // 
             // radioVerbindungenAbDatum
             // 
             this.radioVerbindungenAbDatum.AutoSize = true;
+            this.radioVerbindungenAbDatum.Checked = true;
             this.radioVerbindungenAbDatum.Location = new System.Drawing.Point(3, 3);
             this.radioVerbindungenAbDatum.Name = "radioVerbindungenAbDatum";
             this.radioVerbindungenAbDatum.Size = new System.Drawing.Size(110, 24);
@@ -507,28 +504,29 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelVerbindungenErgebnisse.AutoScroll = true;
+            this.panelVerbindungenErgebnisse.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelVerbindungenErgebnisse.Location = new System.Drawing.Point(3, 153);
             this.panelVerbindungenErgebnisse.Name = "panelVerbindungenErgebnisse";
-            this.panelVerbindungenErgebnisse.Size = new System.Drawing.Size(1008, 391);
-            this.panelVerbindungenErgebnisse.TabIndex = 2;
+            this.panelVerbindungenErgebnisse.Size = new System.Drawing.Size(896, 332);
+            this.panelVerbindungenErgebnisse.TabIndex = 10;
             // 
             // tableAppOptions
             // 
             this.tableAppOptions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableAppOptions.ColumnCount = 1;
+            this.tableAppOptions.ColumnCount = 2;
             this.tableAppOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableAppOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F));
             this.tableAppOptions.Controls.Add(this.panelVerbindungen, 0, 1);
             this.tableAppOptions.Controls.Add(this.panelFahrplan, 0, 0);
-            this.tableAppOptions.Controls.Add(this.panelInDerNaehe, 0, 2);
+            this.tableAppOptions.Controls.Add(this.panelInDerNaehe, 1, 0);
             this.tableAppOptions.Location = new System.Drawing.Point(12, 98);
             this.tableAppOptions.Name = "tableAppOptions";
-            this.tableAppOptions.RowCount = 3;
+            this.tableAppOptions.RowCount = 2;
             this.tableAppOptions.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableAppOptions.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableAppOptions.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableAppOptions.Size = new System.Drawing.Size(1026, 945);
+            this.tableAppOptions.Size = new System.Drawing.Size(914, 990);
             this.tableAppOptions.TabIndex = 9;
             // 
             // panelInDerNaehe
@@ -538,9 +536,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelInDerNaehe.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelInDerNaehe.Controls.Add(this.tableLayoutPanel6);
-            this.panelInDerNaehe.Location = new System.Drawing.Point(3, 889);
+            this.panelInDerNaehe.Location = new System.Drawing.Point(917, 3);
             this.panelInDerNaehe.Name = "panelInDerNaehe";
-            this.panelInDerNaehe.Size = new System.Drawing.Size(1020, 53);
+            this.panelInDerNaehe.Size = new System.Drawing.Size(1, 484);
             this.panelInDerNaehe.TabIndex = 9;
             // 
             // tableLayoutPanel6
@@ -551,14 +549,16 @@
             this.tableLayoutPanel6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel6.Controls.Add(this.label8, 0, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label9, 0, 3);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowCount = 4;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(1014, 1);
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 10F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(0, 478);
             this.tableLayoutPanel6.TabIndex = 0;
             // 
             // label8
@@ -567,15 +567,25 @@
             this.label8.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(3, 10);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(287, 38);
+            this.label8.Size = new System.Drawing.Size(1, 38);
             this.label8.TabIndex = 0;
             this.label8.Text = "Stationen in der Nähe";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(3, 60);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(1, 20);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Funktion nicht verfügbar";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 1055);
+            this.ClientSize = new System.Drawing.Size(938, 1100);
             this.Controls.Add(this.tableAppOptions);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -633,7 +643,6 @@
         private TableLayoutPanel tableLayoutPanel2;
         private Label label5;
         private TableLayoutPanel tableLayoutPanel4;
-        private Panel panelVerbindungenErgebnisse;
         private Label label6;
         private Label label7;
         private DateTimePicker txtVerbindungenDatum;
@@ -646,5 +655,8 @@
         private Panel panelInDerNaehe;
         private TableLayoutPanel tableLayoutPanel6;
         private Label label8;
+        private FlowLayoutPanel panelVerbindungenErgebnisse;
+        private Label label9;
+        private Button btnFahrplanStationenTauschen;
     }
 }

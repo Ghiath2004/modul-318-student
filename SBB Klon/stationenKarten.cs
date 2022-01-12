@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace SBB_Klon
 {
-    public partial class stationenKarten : UserControl
+    public partial class stationKarte : UserControl
     {
 #pragma warning disable CS8618 // Ein Non-Nullable-Feld muss beim Beenden des Konstruktors einen Wert ungleich NULL enthalten. Erwägen Sie die Deklaration als Nullable.
-        public stationenKarten()
+        public stationKarte()
         {
             InitializeComponent();
         }
@@ -27,6 +27,8 @@ namespace SBB_Klon
         private string _info2;
         private string _info3;
         private string _verspaetung;
+        private string _allDetails;
+        private string _id;
 
         [Category("Custom Props")]
         public string Titel
@@ -83,6 +85,32 @@ namespace SBB_Klon
             get { return _verspaetung; }
             set { _verspaetung = value; lblKarteVerspaetung.Text = value; }
         }
+
+        [Category("Custom Props")]
+        public string AllDetails
+        {
+            get { return _allDetails; }
+            set { _allDetails = value; }
+        }
+
+        [Category("Custom Props")]
+        public string Id
+        {
+            get { return _id; }
+            set { _id = value; btnKarteTeilen.Click += new EventHandler(btnTeilen_Click); btnKarteTeilen.Name = value; this.Name = "item" + value; }
+        }
         #endregion
+
+        private void btnTeilen_Click(object sender, EventArgs e)
+        {
+            string details = this.AllDetails.ToString();
+            var emailForm = new emailSenden(details);
+            emailForm.Show();
+        }
+
+        private void stationenKarten_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
